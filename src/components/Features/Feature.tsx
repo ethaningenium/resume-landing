@@ -8,27 +8,28 @@ type Props = {
 
 export const Feature = (props: Props) => {
   return (
-    <Flex
-      direction={props.imageRight ? "row-reverse" : "row"}
-      align="center"
-      gap="lg"
-      justify={"center"}
+    <div
+      className={`flex ${
+        props.imageRight
+          ? "md:flex-row-reverse flex-col "
+          : "md:flex-row flex-col"
+      } w-full gap-12 items-center`}
     >
-      <Image
+      <NextImage
         alt="Hero Image"
-        component={NextImage}
         width={1000}
-        height={400}
-        w={400}
-        fit="contain"
-        radius="md"
-        fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+        height={1000}
+        className="w-96 h-auto"
         src="https://assets-global.website-files.com/635c591378332f38be25d45f/65a2faf86841a21a6ff327c0_Bullet%20points-p-1080.png"
       />
-      <Flex direction={"column"} align="start">
-        <span>ATTRACT HIRING MANAGERS AND RECRUITERS</span>
-        <h2>Customize your resume with advanced AI</h2>
-        <p style={{ width: "500px" }}>
+      <div className="flex flex-col items-start gap-2 ">
+        <span className="font-medium text-blue-500">
+          ATTRACT HIRING MANAGERS AND RECRUITERS
+        </span>
+        <h2 className="text-3xl font-bold">
+          Customize your resume with advanced AI
+        </h2>
+        <p className="text-gray-600">
           Struggling with drafting your resume? Crafting impactful bullet points
           can be even more challenging. That's why we've integrated a powerful
           AI that analyzes and generates bullet points to enhance your resume
@@ -38,7 +39,7 @@ export const Feature = (props: Props) => {
         <Button size="lg" variant="transparent">
           Enhance my resume
         </Button>
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   );
 };

@@ -8,13 +8,13 @@ import { Flex, Button } from "@mantine/core";
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full overflow-hidden flex items-center flex-col">
       <Header />
       <Hero />
       <WhyMe />
       <Features />
       <Trusted />
       <FAQ />
-    </>
+    </div>
   );
 }

@@ -3,14 +3,14 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <Flex justify="space-evenly" align="center" direction="row" gap="xl">
-      <h1>Leadify</h1>
-      <Group gap="lg" justify="space-around">
+    <header className="flex justify-between container py-6">
+      <span className="text-3xl font-bold">Leadify</span>
+      <div className="flex gap-16 list-none">
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
-      </Group>
+      </div>
       <Button>Get Started</Button>
-    </Flex>
+    </header>
   );
 };

@@ -32,9 +32,13 @@ export const FAQ = () => {
   ));
 
   return (
-    <Flex direction={"column"} align={"center"} px={"100px"} mt={"100px"}>
-      <h2>Frequently Asked Questions</h2>
-      <span>Here are some of our most frequently asked questions</span>
+    <div className="flex flex-col gap-8 container items-center py-8">
+      <div className="flex flex-col items-center gap-4">
+        <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+        <span className="text-gray-600">
+          Here are some of our most frequently asked questions
+        </span>
+      </div>
       <Accordion
         mt={"30px"}
         style={{ width: "100%" }}
@@ -44,6 +48,6 @@ export const FAQ = () => {
       >
         {items}
       </Accordion>
-    </Flex>
+    </div>
   );
 };

@@ -3,15 +3,7 @@ import React from "react";
 
 export const Label = () => {
   return (
-    <Flex
-      direction={"row"}
-      align="center"
-      gap="lg"
-      bg={"#F7F7F7"}
-      p={"lg"}
-      py={"sm"}
-      style={{ borderRadius: "10px" }}
-    >
+    <Flex className="flex bg-gray-100 py-2 px-4 gap-3 rounded-2xl">
       <svg
         width="30px"
         height="30px"
@@ -36,9 +28,7 @@ export const Label = () => {
           fill="#EB4335"
         />
       </svg>
-      <span style={{ fontSize: "18px", lineHeight: 1.5, fontWeight: "bold" }}>
-        Dropbox
-      </span>
+      <span className="text-lg text-gray-900 font-bold">Dropbox</span>
     </Flex>
   );
 };
